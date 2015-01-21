@@ -1,0 +1,19 @@
+{
+  "name": "swiftgift_challenge",
+  "version": "0.0.0",
+  "authors": [
+    "Dmitry Manannikov <slonoed@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "react": "~0.12.2",
+    "Swipe": "~2.0.0"
+  }
+}
