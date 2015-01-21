@@ -22,7 +22,7 @@ describe('code challenge', function() {
 
     it('must add item to list', function() {
         var input = getComponent('header--input'),
-            btn = element(by.css('.header button[type="submit"]')),
+            btn = element.all(by.css('.header button')).get(1),
             error = getComponent('error'),
             links;
 
@@ -38,7 +38,7 @@ describe('code challenge', function() {
 
     it('must show error if wrong link', function() {
         var input = getComponent('header--input'),
-            btn = element(by.css('.header button[type="submit"]')),
+            btn = element.all(by.css('.header button')).get(1),
             error = getComponent('error'),
             links;
 
@@ -51,7 +51,7 @@ describe('code challenge', function() {
     });
 
     it('must show menu', function() {
-        var toggler = element(by.css('.header button[type="button"]')),
+        var toggler = element.all(by.css('.header button[type="button"]')).get(0),
             list = getComponent('list');
 
         toggler.click();
@@ -62,7 +62,7 @@ describe('code challenge', function() {
     });
 
     it('must hide menu if click list panel', function() {
-        var toggler = element(by.css('.header button[type="button"]')),
+        var toggler = element.all(by.css('.header button[type="button"]')).get(0),
             list = getComponent('list');
 
         toggler.click();

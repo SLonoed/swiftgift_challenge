@@ -54,12 +54,15 @@ var Header = React.createClass({
     render: function() {
         return (
             <div className="header" >
-                <form className="header--form" onSubmit={this.onAddUrl}>
-                    <Button type="button" cStyle="navy" onClick={this.props.toggleMenu}>
+                <form className="header--form" onSubmit={this.onAddUrl} >
+                    <Button
+                        type="button"
+                        cStyle="navy"
+                        onClick={this.props.toggleMenu} >
                         <Fa icon="bars" size="lg" />
                     </Button>
-                    <input ref="input" className="header--input" type="text" placeholder="Enter image url"/>
-                    <Button type="submit">
+                    <input ref="input" className="header--input" type="text" placeholder="Enter image url" />
+                    <Button type="button" onClick={this.onAddUrl}>
                         <Fa icon="plus" />
                     </Button>
                 </form>

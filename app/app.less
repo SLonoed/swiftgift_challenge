@@ -30,6 +30,11 @@
 
 
 // region tags
+* {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 html, body {
     height: 100%;
 
@@ -71,8 +76,10 @@ a, a:visited {
 
 .list {
     display: flex;
+    display: -webkit-flex;
 
     flex-direction: column;
+    -webkit-flex-direction: column;
 
     position: absolute;
 
@@ -87,6 +94,7 @@ a, a:visited {
 
     &--content {
         flex: 1;
+        -webkit-flex: 1;
 
         overflow-y: scroll;
         overflow-x: hidden;
@@ -99,6 +107,8 @@ a, a:visited {
 
     &--overlay {
         display: none;
+
+        cursor: pointer;
     }
 
     &--moved &--overlay {
@@ -123,14 +133,17 @@ a, a:visited {
 
     &--form {
         display: flex;
+        display: -webkit-flex;
 
         flex-direction: row;
+        -webkit-flex-direction: row;
 
         padding: 4px @inner-padding;
     }
 
     &--input {
         flex: 1;
+        -webkit-flex: 1;
 
         margin: 4px 6px 4px 12px;
         padding: 5px 10px;
@@ -139,7 +152,7 @@ a, a:visited {
         border: medium none;
         border-radius: 15px;
 
-        font-size: 14px;
+        font-size: 18px;
 
         outline: none;
         transition: background 0.15s ease-in-out 0s;
@@ -228,8 +241,10 @@ a, a:visited {
 
 .nav {
     display: flex;
+    display: -webkit-flex;
 
     flex-direction: column;
+    -webkit-flex-direction: column;
 
     position: absolute;
 
@@ -256,6 +271,7 @@ a, a:visited {
 
     &--list {
         flex: 1;
+        -webkit-flex: 1;
 
         padding: 5px 0 10px 0;
 

@@ -41,6 +41,10 @@ var Gallery = React.createClass({
         this.swipe.slide(0);
     },
 
+    onImageTouchStart: function(e) {
+        e.preventDefault();
+    },
+
     render: function() {
         var className = React.addons.classSet({
             gallery: true,
@@ -58,13 +62,16 @@ var Gallery = React.createClass({
                             };
 
                             return (
-                                <div style={style} className="gallery--img" >
+                                <div
+                                    style={style}
+                                    className="gallery--img"
+                                    onClick={this.onImageTouchStart} >
                                 </div>
                             );
                         })}
                     </div>
                 </div>
-                <div className="gallery--close" onClick={this.close}>
+                <div className="gallery--close" onClick={this.close} >
                     <Fa icon="close" size="2x" />
                 </div>
             </div>
