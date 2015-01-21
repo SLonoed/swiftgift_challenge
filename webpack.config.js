@@ -17,7 +17,7 @@ var config = {
         app: './app/main.js'
     },
     output: {
-        publicPath: './',
+        publicPath: isProduction ? './' : '/',
         path: path.resolve(__dirname, './dist/'),
         filename: 'bundle.js'
     },

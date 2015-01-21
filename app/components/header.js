@@ -42,6 +42,7 @@ var Header = React.createClass({
         event.preventDefault();
 
         if (this.isImageUrl(url)) {
+            document.activeElement.blur();
             imagesStore.addImage(url);
             input.value = '';
         } else {
